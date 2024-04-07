@@ -1,0 +1,146 @@
+// Useful SCSS Mixins
+
+/*
+-----------------------------------------
+REM CONVERSION
+Requires $font-size variable to be set
+-----------------------------------------
+*/
+
+@function strip-unit($num) {
+  @return math.div($num, ($num * 0 + 1));
+}
+
+@mixin rem-size($value, $property: font-size) {
+  $pxValue: strip-unit($value);
+  $baseValue: strip-unit($font-size);
+  $remValue: math.div($pxValue, $baseValue);
+  #{$property}: $value;
+  #{$property}: $remValue + rem;
+}
+
+
+/*
+-----------------------------------------
+BOX SIZING
+-----------------------------------------
+*/
+@mixin box-sizing($sizing: border-box) {
+     -moz-box-sizing: $sizing;
+  -webkit-box-sizing: $sizing;
+          box-sizing: $sizing;
+}
+
+
+/*
+-----------------------------------------
+CLEAR FLOAT
+-----------------------------------------
+*/
+
+@mixin clearfix() {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+/*
+-----------------------------------------
+CSS3
+Please use autoprefixer
+-----------------------------------------
+*/
+
+// Box Shadow
+@mixin box-shadow ($x: 0px, $y: 3px, $blur: 5px, $alpha: 0.5) {
+  box-shadow: $x $y $blur rgba(0, 0, 0, $alpha);
+}
+
+// Box Shadow Color
+@mixin box-shadow-color ($x: 0px, $y: 3px, $blur: 5px, $color: rgba(0,0,0,.5)) {
+  box-shadow: $x $y $blur $color;
+}
+
+// Inner Shadow
+@mixin inner-shadow ($x: 0, $y: 1px, $blur: 2px, $alpha: 0.25) {
+  box-shadow: inset $x $y $blur rgba(0, 0, 0, $alpha);
+}
+
+// Animation
+@mixin animation ($name, $duration: 300ms, $delay: 0, $ease: ease) {
+  animation: $name $duration $delay $ease;
+}
+
+// Transition
+@mixin transition ($prop: all, $time: 0.2s, $ease: linear) {
+  transition: $prop $time $ease;
+}
+
+// No Transition
+@mixin transition-none() {
+  transition: none;
+}
+
+// Rotate
+@mixin rotate($degrees) {
+  transform: rotate($degrees);
+}
+
+// Scale
+@mixin scale($ratio: 1, $ratio-y: 1) {
+  transform: scale($ratio, $ratio-y);
+}
+
+// Translate
+@mixin translate($x: 0, $y: 0) {
+  transform: translate($x, $y);
+}
+
+// Skew
+@mixin skew($x: 0, $y: 0) {
+  transform: skew($x, $y);
+}
+
+// Linear Gradient
+@mixin gradient ($origin: bottom, $start: #ffffff, $stop: #e2e2e2) {
+  background: $start;
+  background: linear-gradient(to $origin, $start 0%, $stop 100%);
+}
+
+
+/*
+-----------------------------------------
+ZEBRA STRIPE
+-----------------------------------------
+*/
+
+// Table Zebra Stripe
+@mixin zebra-stripe($stripe_color: #F0F0F0) {
+  tbody tr:nth-child(2n+1) { background: $stripe_color; }
+}
+
+// List Zebra Stripe
+@mixin zebra-list-stripe($stripe_color: #F0F0F0) {
+  li:nth-child(2n+1) { background: $stripe_color; }
+}
+
+
+/*
+-----------------------------------------
+PSUEDO
+-----------------------------------------
+*/
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}

@@ -1,0 +1,41 @@
+/*
+-----------------------------------------
+TYPOGRAPHY
+-----------------------------------------
+*/
+
+
+/*  Basics */
+
+a {
+  color: var(--link-color);
+  @include transition();
+  text-decoration: none;
+
+  &:hover {
+    
+  }
+}
+
+p {
+  @include rem-size($font-size);
+  line-height: 1.4em;
+  color: var(--text-color);
+  margin-bottom: 1.2em;
+}
+
+blockquote {
+
+}
+
+hr {
+
+}
+
+
+/* Headers */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+  line-height: 1.4em;
+}

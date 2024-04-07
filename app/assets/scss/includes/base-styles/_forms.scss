@@ -1,0 +1,68 @@
+/*
+-----------------------------------------
+FORMS
+-----------------------------------------
+*/
+
+
+form {
+  margin: 10px 0;
+}
+
+label {
+  display: block;
+  @include rem-size(15px);
+  color: var(--text-color);
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+
+input, textarea {
+  width: 100%;
+  border: 1px solid #333;
+  padding: 10px;
+  @include rem-size(16px);
+  color: var(--text-color);
+  border-radius: 4px; // For iOS
+
+  &:disabled {
+    color: #ccc;
+    background: #fff;
+  }
+}
+
+textarea {
+  min-height: 200px;
+
+  &.small {
+    min-height: 150px;
+  }
+
+  &.large {
+    min-height: 250px;
+  }
+}
+
+select {
+  width: 100%;
+
+  option {
+
+  }
+}
+
+
+/*
+-----------------------------------------
+FORM LAYOUT
+-----------------------------------------
+*/
+
+
+.field-group {
+  @include clearfix();
+}
+
+.field {
+  margin-bottom: 20px;
+}
