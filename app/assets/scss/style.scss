@@ -25,10 +25,8 @@
 @import "includes/modules/_masthead.scss";
 @import "includes/modules/_footer.scss";
 
+@import "includes/modules/_landing-page.scss";
+
 
 /* Vendors */
 @import "includes/utility/_vendor-overrides.scss";
-
-
-/* Media Queries */
-@import "includes/media-queries/_all.scss";

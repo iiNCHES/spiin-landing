@@ -1,8 +1,8 @@
 {
-  "name": "spiin",
+  "name": "LDSG Creative",
   "version": "1.0",
   "author": "Chris Bishop <cbishop@cibgraphics.com> (http://cibgraphics.com)",
-  "description": "Static site for spiin",
+  "description": "Creative site for LDSG",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cibgraphics/Vanilla5.git"

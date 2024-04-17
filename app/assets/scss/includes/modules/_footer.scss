@@ -6,5 +6,10 @@ FOOTER
 
 
 .site-footer {
-
+  margin: 40px 0;
+  
+  p {
+    @include rem-size(14px);
+    color: var(--gray);
+  }
 }

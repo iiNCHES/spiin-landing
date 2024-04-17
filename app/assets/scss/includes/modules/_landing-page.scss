@@ -1,0 +1,17 @@
+.hero {
+  h1 {
+    font-weight: var(--bold);
+    color: var(--primary);
+  }
+}
+
+
+
+.more-info {
+  margin: 100px auto;
+  max-width: 550px;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px;
+}

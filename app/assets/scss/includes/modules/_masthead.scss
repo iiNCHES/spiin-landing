@@ -6,5 +6,38 @@ MASTHEAD
 
 
 .site-masthead {
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-block: 32px 16px;
+  }
+}
 
+.main-nav {
+  margin-left: auto;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    @include mq('tablet') {
+      gap: 18px;
+      margin-inline-end: 24px;
+    }
+  }
+
+  li a {
+    @include rem-size(16px);
+
+    @include mq('tablet') {
+      @include rem-size(22px);
+    }
+  }
+
+  a {
+    padding: 8px 16px;
+    text-decoration: none;
+  }
 }

@@ -4,3 +4,54 @@ VENDOR OVERRIDES
 -----------------------------------------
 */
 
+
+.cog-form * {
+  font-family: var(--font) !important;
+}
+
+.cog-header {
+  display: none !important;
+}
+
+
+html .cog-cognito--styled .cog-button--primary, html .cog-cognito--styled .cog-page__navigation .cog-button, :root:root:root:root:root .cog-cognito--styled .cog-button--primary, :root:root:root:root:root .cog-cognito--styled .cog-page__navigation .cog-button {
+  cursor: pointer;
+  display: inline-flex;
+  flex-wrap: wrap;
+  border: none;
+  @include transition();
+  -webkit-appearance: none;
+  background-color: var(--brand-primary);
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px 20px !important;
+  min-width: 0 !important;
+  text-align: center;
+  width: auto;
+  border-radius: var(--radius);
+  @include rem-size(14px);
+  line-height: 1.4em;
+  font-family: var(--font);
+  margin-inline: auto;
+
+  &:hover {
+    background-color: var(--primary-light);
+    color: var(--white);
+  }
+
+  @include mq('phone') {
+    @include rem-size(18px);
+    padding: 10px 50px !important;
+  }
+}
+
+
+html .cog-cognito--styled textarea, html .cog-cognito--styled select, html .cog-cognito--styled input[type=text], html .cog-cognito--styled [type=tel], html .cog-cognito--styled [type=password], html .cog-cognito--styled [type=date], html .cog-cognito--styled [type=email], html .cog-cognito--styled [type=url], html .cog-cognito--styled [type=time], :root:root:root:root:root .cog-cognito--styled textarea, :root:root:root:root:root .cog-cognito--styled select, :root:root:root:root:root .cog-cognito--styled input[type=text], :root:root:root:root:root .cog-cognito--styled [type=tel], :root:root:root:root:root .cog-cognito--styled [type=password], :root:root:root:root:root .cog-cognito--styled [type=date], :root:root:root:root:root .cog-cognito--styled [type=email], :root:root:root:root:root .cog-cognito--styled [type=url], :root:root:root:root:root .cog-cognito--styled [type=time] {
+  font-size: 1rem !important;
+}
+
+
+html .cog-label, :root:root:root:root:root .cog-label {
+  color: var(--text-color);
+  font-weight: var(--normal) !important;
+}
