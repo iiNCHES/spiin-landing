@@ -11,11 +11,18 @@ MASTHEAD
     align-items: center;
     gap: 24px;
     padding-block: 32px 16px;
+    flex-direction: column;
+
+    @include mq('phone') {
+      flex-direction: row;
+    }
   }
 }
 
 .main-nav {
-  margin-left: auto;
+  @include mq('phone') {
+    margin-left: auto;
+  }
 
   ul {
     display: flex;
@@ -28,8 +35,9 @@ MASTHEAD
     }
   }
 
-  li a {
+  li, a {
     @include rem-size(16px);
+    text-align: center;
 
     @include mq('tablet') {
       @include rem-size(22px);

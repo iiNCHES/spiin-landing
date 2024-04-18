@@ -20,6 +20,7 @@ html(lang='en-US', dir='ltr')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
     link(href='https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap' rel='stylesheet')
 
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')
     link(href='./assets/css/style.css', rel='stylesheet', media='screen')
 
     meta(property='og:type' content='website')
@@ -64,8 +65,8 @@ html(lang='en-US', dir='ltr')
 
     include ../partials/footer.pug
     
-    // Alpine (just for my interactions)
-    script(src='//cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js' defer='')
+    script(src='https://code.jquery.com/jquery-3.7.1.min.js' integrity='sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=' crossorigin='anonymous')
+
     
     // Custom JS
-    script(src='./assets/js/app.js')
+    script(src='./assets/js/app.min.js')

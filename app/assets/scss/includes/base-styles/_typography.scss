@@ -25,6 +25,10 @@ p {
   &:last-child {
     margin-bottom: 0;
   }
+
+  &.large {
+    @include rem-size(22px);
+  }
 }
 
 blockquote {
@@ -47,13 +51,17 @@ h1, h2, h3, h4, h5, h6,
 .text-header--6 {
   line-height: 1.6;
   font-weight: var(--bold);
-  color: var(--text-color);
+  color: var(--primary);
   margin-bottom: 1em;
 }
 
 .text-header--1, h1 {
-  @include rem-size(36px);
+  @include rem-size(28px);
   font-weight: var(--normal);
+
+  @include mq('tablet') {
+    @include rem-size(36px);
+  }
 }
 
 .text-header--2, h2 {
