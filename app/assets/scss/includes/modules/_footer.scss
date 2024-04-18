@@ -7,9 +7,43 @@ FOOTER
 
 .site-footer {
   margin: 40px 0;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
   
   p {
     @include rem-size(14px);
     color: var(--gray);
+  }
+
+  img {
+    max-height: 30px;
+    margin-bottom: 8px;
+  }
+
+  .partner {
+    img {
+      max-height: 20px;
+    }
+  }
+
+  @include mq('tablet') {
+    .content {
+      gap: 20px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .copyright {
+      text-align: left;
+    }
+
+    .partner {
+      text-align: right;
+    }
   }
 }
