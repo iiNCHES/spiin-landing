@@ -29,6 +29,10 @@ p {
   &.large {
     @include rem-size(22px);
   }
+
+  small {
+    @include rem-size(12px);
+  }
 }
 
 blockquote {
